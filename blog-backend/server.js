@@ -76,7 +76,6 @@ const port = process.env.PORT || 5000;
 app.use(cors(
     {
     origin:["https://my-ne-blog-5zmb.vercel.app"],
-    methods:["POST","GET"],
     credentials:true
     }
 )); 
