@@ -10,7 +10,7 @@ const ListPostsPage = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/posts");
+        const response = await axios.get("https://my-ne-blog.vercel.app/api/posts");
         setPosts(response.data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -23,7 +23,7 @@ const ListPostsPage = () => {
   const handleDelete = async (postId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/posts/${postId}`
+        `https://my-ne-blog.vercel.app/api/posts/${postId}`
       );
       if (response.status === 200) {
         setPosts(posts.filter((post) => post._id !== postId));
